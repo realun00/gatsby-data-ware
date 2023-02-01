@@ -1,0 +1,9 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #282828;
+  color: #e0e0e0;
+  margin-top: var(--space-5);
+  padding: 50px var(--size-gutter);
+  font-size: var(--font-sm);
+}
