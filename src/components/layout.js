@@ -10,6 +10,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import About from "./sections/about"
+
+import "bootstrap/dist/css/bootstrap.css"
 import "./layout.css"
 import "./styles.scss"
 
@@ -25,19 +28,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="app-body">
       <Header siteTitle={data.site.siteMetadata?.title || `DataWare`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
+      <div className="container-xxl app-container">
         <main>{children}</main>
+        <About/>
       </div>
-      <Footer siteTitle={data.site.siteMetadata?.title || `DataWare`}/>
-    </>
+      <Footer siteTitle={data.site.siteMetadata?.title || `DataWare`} />
+    </div>
   )
 }
 

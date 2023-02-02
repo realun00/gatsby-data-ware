@@ -1,9 +1,50 @@
+.app-body {
+  position: relative;
+  min-height: 100vh !important;
+}
+
+.app-container {
+  //padding-bottom: 220px;
+}
+
+header {
+  a {
+    margin-left: 0.5rem;
+    text-decoration: none;
+  }
+}
+
 footer {
-  display: flex;
-  justify-content: space-between;
   background-color: #282828;
   color: #e0e0e0;
   margin-top: var(--space-5);
-  padding: 50px var(--size-gutter);
+  padding: 20px 0;
   font-size: var(--font-sm);
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  min-height: 126px;
+
+  a {
+    color: #e0e0e0;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  .company-info {
+    max-width: 400px;
+  }
+
+  .copyright {
+    color: #888888;
+  }
+
+  .footer-socials {
+    font-size: 1.2rem;
+    svg {
+      margin-right: 0.6em;
+    }
+  }
 }
