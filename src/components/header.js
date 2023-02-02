@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
       >
         <StaticImage
           src="../images/logo.png"
-          height={50}
+          height={40}
           quality={95}
           formats={["auto", "webp", "avif"]}
           alt="DataWare Logo"
