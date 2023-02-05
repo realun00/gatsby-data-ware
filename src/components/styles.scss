@@ -3,13 +3,26 @@
   min-height: 100vh !important;
 }
 
-.app-container {
-  //padding-bottom: 220px;
+body {
+  background-color: #888888;
+}
+
+a {
+  color: #e0e0e0;
+
+  &:hover {
+    color: var(--color-primary);
+  }
 }
 
 header {
+  background-color: #282828;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
   a {
-    margin-left: 0.5rem;
+    margin-left: 0.8rem;
     text-decoration: none;
   }
 }
@@ -20,9 +33,6 @@ footer {
   margin-top: var(--space-5);
   padding: 20px 0;
   font-size: var(--font-sm);
-  // position: absolute;
-  // bottom: 0;
-  // width: 100%;
   min-height: 126px;
 
   a {
@@ -47,4 +57,33 @@ footer {
       margin-right: 0.6em;
     }
   }
+}
+
+.site-header {
+  font-size: calc(1.375rem + 1.6vw);
+}
+
+section {
+  //height: 100vh;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+section:nth-child(1) {
+  // background-position: center top;
+  // background-image: url(../images/electrical1.jpg);
+  // height: 1194px;
+  // padding-top: 50px;
+  // background-repeat: no-repeat;
+  padding-top: 120px;
+}
+section:nth-child(2) {
+  // background-position: center top;
+  // background-image: url(../images/cloud-wp.jpg);
+  // //height: 1194px;
+  // padding-top: 50px;
+  // background-repeat: no-repeat;
+}
+section:nth-child(3) {
+  // background: #282828;
 }

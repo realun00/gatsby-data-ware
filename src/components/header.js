@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       margin: `0 auto`,
-      padding: `var(--space-2) 0`,
+      padding: `var(--space-3) 0`,
     }}
   >
     <div className="container-xxl d-flex justify-content-between align-items-center">
@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <div>
         <AnchorLink
-          to="/"
+          to="#what-we-do"
           style={{
             fontSize: `var(--font-sm)`,
             textDecoration: `none`,
