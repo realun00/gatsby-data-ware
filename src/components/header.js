@@ -4,12 +4,8 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
-//import useWindowsSize from "../hooks/useWindowsSize"
-
 const Header = () => {
   const [show, setShow] = React.useState(false)
-
-  //const { width } = useWindowsSize()
 
   return (
     <header
