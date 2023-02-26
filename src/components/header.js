@@ -4,12 +4,12 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
-import useWindowsSize from "../hooks/useWindowsSize"
+//import useWindowsSize from "../hooks/useWindowsSize"
 
 const Header = () => {
   const [show, setShow] = React.useState(false)
 
-  const { width } = useWindowsSize()
+  //const { width } = useWindowsSize()
 
   return (
     <header
@@ -38,17 +38,17 @@ const Header = () => {
           <div>
             <button
               onClick={e => {
-                if (width < 992) {
+                //if (width < 992) {
                   if (show) {
                     e.currentTarget.blur()
                     setShow(false)
                   } else {
                     setShow(true)
                   }
-                }
+                //}
               }}
               onBlur={() => {
-                if (width < 992 || !show) {
+                if (!show) {
                   const timer = setTimeout(() => setShow(false), 100)
                   return () => clearTimeout(timer)
                 }
@@ -60,10 +60,10 @@ const Header = () => {
             </button>
             <div
               className={`collapse navbar-collapse${
-                show && width < 992 ? " nav-container-responsive" : ""
+                show ? " nav-container-responsive" : ""
               }`}
               style={
-                show && width < 992 ? { display: "block" } : { display: "none" }
+                show ? { display: "block" } : { display: "none" }
               }
             >
               <ul className="navbar-nav me-auto mb-lg-0">
