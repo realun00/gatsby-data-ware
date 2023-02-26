@@ -13,6 +13,10 @@ import Footer from "./footer"
 import About from "./sections/about"
 import WhatWeDo from "./sections/whatWeDo"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons"
+
 import "bootstrap/dist/css/bootstrap.css"
 import "./layout.css"
 import "./styles.scss"
@@ -28,6 +32,24 @@ const Layout = ({ children }) => {
     }
   `)
 
+  React.useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 200) {
+        document.querySelector(".back-to-top").classList.add("visible")
+      } else {
+        document.querySelector(".back-to-top").classList.remove("visible")
+      }
+    })
+  }, [])
+
+  // This function will scroll the window to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // for smoothly scrolling
+    })
+  }
+
   return (
     <div className="app-body">
       <Header siteTitle={data.site.siteMetadata?.title || `DataWare`} />
@@ -37,6 +59,9 @@ const Layout = ({ children }) => {
         <About />
       </div>
       <Footer siteTitle={data.site.siteMetadata?.title || `DataWare`} />
+      <button onClick={scrollToTop} className="back-to-top">
+        <FontAwesomeIcon icon={faCircleArrowUp} />
+      </button>
     </div>
   )
 }

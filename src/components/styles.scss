@@ -1,25 +1,179 @@
+$primary-blue: #5b94a4;
+$primary-orange: #fc9c04;
+
+$secondary-blue: #bed5db;
+$secondary-orange: #ff9933;
+
 .app-body {
   position: relative;
   min-height: 100vh !important;
 }
 
 body {
-  background-color: #888888;
-}
+  background-position: center 58px;
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
 
-a {
-  color: #e0e0e0;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
 
-  &:hover {
-    color: var(--color-primary);
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $primary-orange;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $secondary-orange;
+    cursor: pointer;
   }
 }
 
+a {
+  color: #fff;
+
+  &:hover {
+    color: $primary-orange;
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 14px;
+  z-index: 2;
+  transition: all 0.4s;
+  border: none;
+  background: none;
+  opacity: 0;
+  pointer-events: none;
+  cursor: default !important;
+}
+
+.back-to-top svg {
+  // width: 35px;
+  // height: 35px;
+  // border-radius: 4px;
+  // background: $primary-orange;
+  font-size: 45px;
+  color: $primary-orange;
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+.back-to-top svg:hover {
+  background: $secondary-orange;
+  color: #fff;
+}
+
+.visible {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.6s;
+  pointer-events: all;
+  cursor: pointer !important;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar {
+  padding: 0px;
+}
+
+.navbar-toggler {
+  &:focus {
+    //box-shadow: none;
+    box-shadow: 0px 0px 5px 2px $primary-orange;
+  }
+}
+
+.nav-item {
+  margin-bottom: 0px;
+}
+
+.nav-link {
+  color: #fff;
+  padding: 0;
+
+  &:visited {
+    color: #fff;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: $primary-orange;
+  }
+}
+
+.nav-container-responsive {
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  width: max-content;
+  padding-left: 1rem;
+
+  // border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+  // border-radius: var(--bs-navbar-toggler-border-radius);
+
+  ul {
+    margin-left: 0px;
+    align-items: flex-end;
+  }
+
+  a {
+    margin-left: 0px;
+  }
+}
+
+.dw-blue-background {
+  background-color: $primary-blue;
+}
+
+.dw-orange-background {
+  background-color: $primary-orange;
+}
+
+.dw-blue-color {
+  color: $primary-blue;
+}
+
+.dw-orange-color {
+  color: $primary-orange;
+}
+
+.dw-secondary-blue-background {
+  background-color: $secondary-blue;
+}
+
+.dw-secondary-orange-background {
+  background-color: $secondary-orange;
+}
+
 header {
-  background-color: #282828;
+  background-color: $primary-blue;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
 
   a {
     margin-left: 0.8rem;
@@ -28,18 +182,18 @@ header {
 }
 
 footer {
-  background-color: #282828;
-  color: #e0e0e0;
+  background-color: $primary-blue;
+  color: #fff;
   margin-top: var(--space-5);
   padding: 20px 0;
   font-size: var(--font-sm);
   min-height: 126px;
 
   a {
-    color: #e0e0e0;
+    color: #fff;
 
     &:hover {
-      color: var(--color-primary);
+      color: $primary-orange;
     }
   }
 
@@ -48,7 +202,7 @@ footer {
   }
 
   .copyright {
-    color: #888888;
+    color: #e0e0e0;
   }
 
   .footer-socials {
@@ -59,31 +213,52 @@ footer {
   }
 }
 
-.site-header {
-  font-size: calc(1.375rem + 1.6vw);
+.cloud-schema {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 992px) {
+  .cloud-schema {
+    justify-content: center;
+  }
+
+  .software-as-service {
+    margin-bottom: 1rem;
+  }
+}
+
+.what-we-do {
+  padding: 0.8rem;
+  border-radius: 25px;
+  opacity: 0.8;
+  height: 100%;
+
+  h4 {
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  p {
+    margin: 0;
+    max-width: none;
+  }
 }
 
 section {
-  //height: 100vh;
   padding: 1rem 0;
-  color: #fff;
+
+  color: #541f00 !important;
 }
 
 section:nth-child(1) {
-  // background-position: center top;
-  // background-image: url(../images/electrical1.jpg);
-  // height: 1194px;
-  // padding-top: 50px;
-  // background-repeat: no-repeat;
+  margin-top: 58px;
   padding-top: 120px;
 }
-section:nth-child(2) {
-  // background-position: center top;
-  // background-image: url(../images/cloud-wp.jpg);
-  // //height: 1194px;
-  // padding-top: 50px;
-  // background-repeat: no-repeat;
-}
-section:nth-child(3) {
-  // background: #282828;
-}
+// section:nth-child(2) {
+
+// }
+// section:nth-child(3) {
+// }
