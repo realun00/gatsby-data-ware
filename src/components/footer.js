@@ -102,16 +102,16 @@ const Footer = ({ siteTitle }) => {
           <div>
             <div className="footer-socials">
               <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faTwitter} />
+                <FontAwesomeIcon icon={faTwitter} alt="twitter icon" />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faFacebook} />
+                <FontAwesomeIcon icon={faFacebook} alt="facebook icon" />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faInstagram} />
+                <FontAwesomeIcon icon={faInstagram} alt="instagram icon" />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faLinkedinIn} />
+                <FontAwesomeIcon icon={faLinkedinIn} alt="linkedin icon" />
               </a>
             </div>
             <span className="copyright">
