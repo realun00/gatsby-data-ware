@@ -13,6 +13,8 @@ import Footer from "./footer"
 import About from "./sections/about"
 import WhatWeDo from "./sections/whatWeDo"
 
+import "../languages/config";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons"

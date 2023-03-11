@@ -23,17 +23,17 @@ body {
 
   /* Track */
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #fff;
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: $primary-orange;
+    background: #ccc;
   }
 
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: $secondary-orange;
+    background: #ccc;
     cursor: pointer;
   }
 }
@@ -60,10 +60,6 @@ a {
 }
 
 .back-to-top svg {
-  // width: 35px;
-  // height: 35px;
-  // border-radius: 4px;
-  // background: $primary-orange;
   font-size: 45px;
   color: $primary-orange;
   background-color: #fff;
@@ -126,13 +122,11 @@ a {
 
 .nav-container-responsive {
   position: absolute;
-  right: 0px;
+  right: -12px;
   top: 50px;
   width: max-content;
-  padding-left: 1rem;
-
-  // border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
-  // border-radius: var(--bs-navbar-toggler-border-radius);
+  padding-right: 1em;
+  padding-bottom: 0.5em;
 
   ul {
     margin-left: 0px;
@@ -257,8 +251,10 @@ section:nth-child(1) {
   margin-top: 58px;
   padding-top: 120px;
 }
-// section:nth-child(2) {
 
-// }
-// section:nth-child(3) {
-// }
+.change-language-button {
+  background-color: transparent;
+  height: fit-content;
+  padding: 0;
+  border: none;
+}

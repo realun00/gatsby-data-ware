@@ -1,19 +1,19 @@
 import * as React from "react"
+import { useTranslation } from "react-i18next"
 
-const About = () => (
-  <section id="about-us">
-    <div className="container-xxl">
-      <h1>About us</h1>
-      <p>
-        <strong>We</strong> are three co-founders with diverse and many years of
-        experience in the field of large corporate systems in the field of
-        finance. Using our experience as a basis and the passion for new
-        technologies in the field of IoT we decided to create Dataware. Our
-        company provides innovative solutions combining software with IoT
-        technologies. The goal is to make their effectiveness accessible.
-      </p>
-    </div>
-  </section>
-)
+const About = () => {
+  const { t } = useTranslation()
+
+  return (
+    <section id="about-us">
+      <div className="container-xxl">
+        <h1>{t("about-us")}</h1>
+        <p>
+          <strong>{t("we")}</strong> {t("about-us-description")}
+        </p>
+      </div>
+    </section>
+  )
+}
 
 export default About

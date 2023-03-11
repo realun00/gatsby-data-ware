@@ -1,0 +1,39 @@
+{
+  "terms-and-cond": "Terms and conditions",
+  "privacy-policy": "Privacy policy",
+  "security": "Security",
+  "copyrights": "All rights reserved.",
+  "description": "A cloud platform, created jointly with Smart Power Management OOD, for managing electricity and other services in shared spaces. The system is implemented in the use of electrical appliances for Camping (refrigerators, washing machines, cooking stoves and lighting)",
+  "site-info": "Site info",
+
+  "about": "About",
+  "about-us": "About us",
+  "what-we-do": "What we do",
+  "contact": "Contact",
+  "contact-us": "Contact us",
+
+  "we": "We",
+  "about-us-description": "are three co-founders with diverse and many years of experience in the field of large corporate systems in the field of finance. Using our experience as a basis and the passion for new technologies in the field of IoT we decided to create Dataware. Our company provides innovative solutions combining software with IoT technologies. The goal is to make their effectiveness accessible.",
+
+  "software-as-service": "Software as service",
+  "inovative-mini-hub-edge": "Innovative Mini Hub (Edge)",
+
+  "cloud-platform": "A cloud platform",
+  "created-with": "created jointly with",
+  "smart-power-management-ltd": "Smart Power Management Ltd",
+  "software-as-service-description": "for managing electricity and other services in shared spaces. The system is implemented in the use of electrical appliances for Camping (refrigerators, washing machines, cooking stoves and lighting).",
+
+  "inovative-mini-hub-smart": "Innovative Mini Hub (Smart unit)",
+  "enabling": "enabling:",
+  "inovative-mini-hub-description-a": "a) the automatic detection and configuration of IoT devices",
+  "inovative-mini-hub-description-b": "b) collection, processing, analysis of IoT data",
+  "inovative-mini-hub-description-c": "c) local or remote control",
+
+  "from-data-to-solutions": "From data to solutions for the sharing economy",
+  "from-data-to-solutions-description-1": "The new devices, which allow remote control over the Internet, become part of our daily life. Each device collects data for a specific purpose that it can to be useful in many ways to the world around us.",
+  "from-data-to-solutions-description-2": "Precisely on the basis of high-quality IoT devices, we offer solutions through which we add higher (next) level of shared use and management in the home, the office or in public places.",
+
+  "language": "Language",
+  "en-lang": "English",
+  "bg-lang": "Bulgarian"
+}
