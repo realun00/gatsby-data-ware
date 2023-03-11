@@ -11,7 +11,7 @@ const WhatWeDo = () => {
         <div className="row">
           <div className="col-lg-6 software-as-service">
             <div className="what-we-do dw-secondary-blue-background">
-              <h4>{t("software-as-service")}</h4>
+              <h3>{t("software-as-service")}</h3>
               <p>
                 <strong>{t("cloud-platform")}</strong> {t("created-with")}{" "}
                 <strong>{t("smart-power-management-ltd")}</strong>,{" "}
@@ -21,7 +21,7 @@ const WhatWeDo = () => {
           </div>
           <div className="col-lg-6">
             <div className="what-we-do dw-secondary-orange-background">
-              <h4>{t("inovative-mini-hub-edge")}</h4>
+              <h3>{t("inovative-mini-hub-edge")}</h3>
               <p>
                 <strong>{t("inovative-mini-hub-smart")}</strong> -{" "}
                 {t("enabling")}

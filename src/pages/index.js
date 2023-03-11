@@ -28,6 +28,7 @@ const IndexPage = () => {
                 alt="Cloud Schema"
                 quality={100}
                 imgStyle={{objectFit: "contain"}}
+                placeholder="none"
               />
             </div>
           </div>

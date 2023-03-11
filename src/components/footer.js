@@ -34,6 +34,7 @@ const Footer = ({ siteTitle }) => {
                 src="../images/logo.png"
                 alt="DataWare Logo"
                 height={50}
+                placeholder="none"
               />
             </Link>
             <div>
@@ -44,7 +45,11 @@ const Footer = ({ siteTitle }) => {
                 }}
                 className="change-language-button"
               >
-                <StaticImage src="../images/bg.png" alt="bg img" />
+                <StaticImage
+                  src="../images/bg.png"
+                  alt="bg img"
+                  placeholder="none"
+                />
               </button>
 
               <button
@@ -58,6 +63,7 @@ const Footer = ({ siteTitle }) => {
                   src="../images/us.png"
                   alt="en img"
                   style={{ marginLeft: "5px" }}
+                  placeholder="none"
                 />
               </button>
             </div>
@@ -101,17 +107,17 @@ const Footer = ({ siteTitle }) => {
           </div>
           <div>
             <div className="footer-socials">
-              <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faTwitter} alt="twitter icon" />
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="twitter link">
+                <FontAwesomeIcon icon={faTwitter} alt="twitter img" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faFacebook} alt="facebook icon" />
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="facebook link">
+                <FontAwesomeIcon icon={faFacebook} alt="facebook img" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faInstagram} alt="instagram icon" />
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="instagram link">
+                <FontAwesomeIcon icon={faInstagram} alt="instagram img" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faLinkedinIn} alt="linkedin icon" />
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="linkedin link">
+                <FontAwesomeIcon icon={faLinkedinIn} alt="linkedin img" />
               </a>
             </div>
             <span className="copyright">

@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
         <About />
       </div>
       <Footer siteTitle={data.site.siteMetadata?.title || `DataWare`} />
-      <button onClick={scrollToTop} className="back-to-top">
+      <button onClick={scrollToTop} className="back-to-top" aria-label="scroll-to-top">
         <FontAwesomeIcon icon={faCircleArrowUp} />
       </button>
     </div>

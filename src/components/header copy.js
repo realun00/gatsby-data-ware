@@ -20,7 +20,7 @@ const Header = () => {
       window.addEventListener("scroll", onScroll, { passive: true })
       return () => window.removeEventListener("scroll", onScroll)
     }
-  }, [show])
+  }, [show]);
 
   return (
     <header
@@ -47,21 +47,7 @@ const Header = () => {
           />
         </Link>
         <nav className="navbar navbar-expand-lg">
-          <div
-            tabIndex={0}
-            onBlur={e => {
-              const currentTarget = e.currentTarget
-
-              // Give browser time to focus the next element
-              requestAnimationFrame(() => {
-                // Check if the new focused element is a child of the original container
-                if (!currentTarget.contains(document.activeElement)) {
-                  setShow(false)
-                }
-              })
-            }}
-            role="button"
-          >
+          <div>
             <button
               onClick={e => {
                 if (show) {
@@ -69,6 +55,12 @@ const Header = () => {
                   e.currentTarget.blur()
                 } else {
                   setShow(true)
+                }
+              }}
+              onBlur={() => {
+                if (show) {
+                  const timer = setTimeout(() => setShow(false), 100)
+                  return () => clearTimeout(timer)
                 }
               }}
               className="navbar-toggler"
@@ -80,21 +72,10 @@ const Header = () => {
               className={`collapse navbar-collapse${
                 show ? " nav-container-responsive" : ""
               }${show && offset !== 0 ? " dw-blue-background" : ""}`}
-              style={
-                show
-                  ? { display: "block", width: "100vw" }
-                  : { display: "none" }
-              }
+              style={show ? { display: "block", width: "100vw" } : { display: "none" }}
             >
               <ul className="navbar-nav me-auto mb-lg-0">
-                <li
-                  className="nav-item"
-                  onClick={() => {
-                    const timer = setTimeout(() => setShow(false), 100)
-                    return () => clearTimeout(timer)
-                  }}
-                  role="presentation"
-                >
+                <li className="nav-item">
                   <AnchorLink
                     to="/#what-we-do"
                     style={{
@@ -107,14 +88,7 @@ const Header = () => {
                     {t("what-we-do")}
                   </AnchorLink>
                 </li>
-                <li
-                  className="nav-item"
-                  onClick={() => {
-                    const timer = setTimeout(() => setShow(false), 100)
-                    return () => clearTimeout(timer)
-                  }}
-                  role="presentation"
-                >
+                <li className="nav-item">
                   <AnchorLink
                     to="/#about-us"
                     style={{
@@ -128,14 +102,7 @@ const Header = () => {
                     {t("about-us")}
                   </AnchorLink>
                 </li>
-                <li
-                  className="nav-item"
-                  onClick={() => {
-                    const timer = setTimeout(() => setShow(false), 100)
-                    return () => clearTimeout(timer)
-                  }}
-                  role="presentation"
-                >
+                <li className="nav-item">
                   <AnchorLink
                     to="/#contact-us"
                     style={{
